@@ -18,6 +18,9 @@ import { SharedModule } from './../shared/shared.module';
     SharedModule,
     MaterialModule,
     ReactiveFormsModule
+  ],
+  exports: [
+    MaterialModule
   ]
 })
 export class AuthModule { }

@@ -11,13 +11,15 @@ import { AuthService } from './../../../core/services/auth.service';
 export class LoginComponent implements OnInit {
 
   form: FormGroup;
+  user;
 
   constructor(
     private formBuilder: FormBuilder,
     private router: Router,
     private authService: AuthService
   ) {
-    this.buildForm();
+    this.buildForm(),
+    this.user = authService.authInfo;
   }
 
   ngOnInit() {
@@ -41,6 +43,30 @@ export class LoginComponent implements OnInit {
     this.form = this.formBuilder.group({
       email: ['', [Validators.required]],
       password: ['', [Validators.required]],
+    });
+  }
+
+  loginWithGoogle() {
+    this.authService.loginWithGoogle()
+    .then((data) => {
+      this.router.navigate(['/user/tienda']);
+      alert('Logeado con Google correctamente');
+      console.log(data);
+    })
+    .catch(() => {
+      alert('No es valido');
+    });
+  }
+
+  loginWithFacebook() {
+    this.authService.loginWithFacebook()
+    .then((data) => {
+      alert('Logeado con Facebook correctamente');
+      this.router.navigate(['/user/tienda']);
+      console.log(data);
+    })
+    .catch(() => {
+      alert('No es valido');
     });
   }
 

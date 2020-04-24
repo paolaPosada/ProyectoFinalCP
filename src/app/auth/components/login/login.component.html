@@ -1,28 +1,56 @@
-<form [formGroup]="form" (ngSubmit)="login($event)">
-    <mat-card>
-      <mat-card-header>
+<form [formGroup]="form" (ngSubmit)="login($event)" > 
+  
+  <mat-toolbar class="login">
+    <span>Criptopope, compra y venta de criptomonedas facil y seguro!</span>
+  </mat-toolbar>
+
+  <mat-card class="header">
+      <mat-card-header >
         <mat-card-title>Login</mat-card-title>
       </mat-card-header>
       <mat-card-content>
         <div class="row">
           <div class="col-xs">
             <mat-form-field>
-              <input placeholder="email" formControlName="email" matInput type="email">
+              <input placeholder="Nombre" formControlName="name" matInput type="string">
+            </mat-form-field>
+            <mat-form-field>
+              <input placeholder="Nickname" formControlName="nickname" matInput type="string">
+            </mat-form-field>
+            <mat-form-field>
+              <input placeholder="Email" formControlName="email" matInput type="email">
             </mat-form-field>
           </div>
         </div>
         <div class="row">
           <div class="col-xs">
             <mat-form-field>
-              <input placeholder="password" formControlName="password" matInput type="password">
+              <input placeholder="Password" formControlName="password" matInput type="password">
             </mat-form-field>
           </div>
         </div>
       </mat-card-content>
-      <mat-card-actions>
+      <mat-card-actions class="boton">
         <button [disabled]="form.invalid" mat-raised-button type="submit">Ingresar</button>
+        <button mat-raised-button (click)="loginWithGoogle()">Google</button>
+        <!--<button mat-raised-button (click)="loginWithFacebook()">Ingresar con Facebook</button>-->
       </mat-card-actions>
+     <p></p>
+        <p>Si no tienes una cuenta registrate</p>
+        <a href="/auth/register">sing in</a>
     </mat-card>
-    
-  </form>
+  </form> 
+ 
+
+<footer class="logfooter">
+<div>
+  <div class="redes">
+    <a href="#" ><img src="../../../../assets/images/facebook.png" alt="facebook" width="50px" height="50px"></a>
+    <a href="#" ><img src="../../../../assets/images/instagram.png" alt="instagram" width="30px" height="30px"></a>
+    <a href="#" ><img src="../../../../assets/images/twitter.png" alt="twitter" width="60px" height="35px"></a>
+  </div>
+</div>
+    © 2020 Copyright:
+    <a href="https://mdbootstrap.com/"> MDBootstrap.com</a>
+</footer>
   
