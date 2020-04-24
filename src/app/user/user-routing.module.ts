@@ -20,7 +20,6 @@ const routes: Routes = [
       {
         path: 'carrito',
         canActivate: [AdminGuard],
-        component: FooterComponent,
         loadChildren: () =>
         import('../order/order.module').then(m => m.OrderModule)
       },
