@@ -3,27 +3,24 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
 
-import { HighlightDirective } from './directives/highlight/highlight.directive';
-import { ExponentialPipe } from './pipes/exponential/exponential.pipe';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { MaterialModule } from './../material/material.module';
 import { CartComponent } from './components/cart/cart.component';
+import { HeaderUsersComponent } from './components/header-users/header-users.component';
 
 @NgModule({
   declarations: [
-    HighlightDirective,
-    ExponentialPipe,
     HeaderComponent,
     FooterComponent,
-    CartComponent
+    CartComponent,
+    HeaderUsersComponent
   ],
   exports: [
-    HighlightDirective,
-    ExponentialPipe,
     HeaderComponent,
     FooterComponent,
-    MaterialModule
+    MaterialModule,
+    HeaderUsersComponent
   ],
   imports: [
     CommonModule,

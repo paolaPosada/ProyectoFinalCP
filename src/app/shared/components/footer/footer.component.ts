@@ -15,10 +15,6 @@ export class FooterComponent implements OnInit {
       Validators.required,
       Validators.email
     ]);
-    // this.emailField.valueChanges
-    // .subscribe(value => {
-    //   console.log(value);
-    // });
   }
 
   ngOnInit() {

@@ -9,7 +9,7 @@ import { environment } from './../../../../environments/environment';
 })
 export class ProductsService {
 
-  constructor( private http: HttpClient) { }
+ /* constructor( private http: HttpClient) { }
 
   getAllProducts() {
     return this.http.get<Product[]>(`${environment.url_api}/products`);
@@ -29,5 +29,52 @@ export class ProductsService {
 
   deleteProduct(id: string) {
     return this.http.delete(`${environment.url_api}/products/${id}`);
+  }*/
+  products: Product[] = [
+    {
+      id: '1',
+      image: 'assets/images/camiseta.png',
+      title: 'Bitcoin',
+      price: 27251186.61
+    },
+    {
+      id: '2',
+      image: 'assets/images/hoodie.png',
+      title: 'Ethereum',
+      price: 682652.4
+    },
+    {
+      id: '3',
+      image: 'assets/images/mug.png',
+      title: 'ZCash',
+      price: 179541.63
+    },
+    {
+      id: '4',
+      image: 'assets/images/pin.png',
+      title: 'Monero',
+      price: 237739.83
+    },
+    {
+      id: '5',
+      image: 'assets/images/stickers1.png',
+      title: 'Litecoin',
+      price: 161956.06
+    },
+    {
+      id: '6',
+      image: 'assets/images/stickers2.png',
+      title: 'Dash',
+      price: 328188.95
+    }
+  ];
+  constructor() { }
+
+  getAllProducts() {
+    return this.products;
+  }
+
+  getProduct(id: string) {
+    return this.products.find(item => id === item.id);
   }
 }

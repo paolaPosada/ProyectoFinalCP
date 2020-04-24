@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
 
 import { LayoutComponent } from './layout/layout.component';
+import { LayoutUsersComponent} from './layout-users/layout-users.component';
 
 import {AdminGuard} from './admin.guard';
 
@@ -21,29 +22,35 @@ const routes: Routes = [
         import('./home/home.module').then(m => m.HomeModule)
       },
       {
-        path: 'products',
-        // canActivate: [AdminGuard],
-        loadChildren: () =>
-        import('./product/product.module').then(m => m.ProductModule)
-      },
-      {
-        path: 'order',
-        loadChildren: () =>
-        import('./order/order.module').then(m => m.OrderModule)
-      },
-      {
         path: 'contact',
-        // canActivate: [AdminGuard],
+        canActivate: [AdminGuard],
         loadChildren: () =>
         import('./contact/contact.module').then(m => m.ContactModule)
       },
     ]
   },
   {
-    path: 'demo',
-    // canActivate: [AdminGuard],
-    loadChildren: () =>
-        import('./demo/demo.module').then(m => m.DemoModule)
+  path: '',
+  component: LayoutUsersComponent,
+  children: [
+      {
+        path: '',
+        redirectTo: '/home',
+        pathMatch: 'full',
+      },
+      {
+        path: 'order',
+        canActivate: [AdminGuard],
+        loadChildren: () =>
+        import('./order/order.module').then(m => m.OrderModule)
+      },
+      {
+        path: 'home',
+        canActivate: [AdminGuard],
+        loadChildren: () =>
+        import('./home/home.module').then(m => m.HomeModule)
+      }
+    ]
   },
   {
     path: 'admin',
@@ -53,7 +60,8 @@ const routes: Routes = [
   },
   {
     path: 'auth',
-    loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule)
+    loadChildren: () =>
+    import('./auth/auth.module').then(m => m.AuthModule)
   },
   {
     path: '**',
