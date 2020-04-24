@@ -8,6 +8,7 @@ import { AngularFireAuthModule } from 'angularfire2/auth';
 import { AngularFireStorageModule } from 'angularfire2/storage';
 
 import { AppRoutingModule } from './app-routing.module';
+import {UserModule} from './user/user.module';
 import { AppComponent } from './app.component';
 import { LayoutComponent } from './layout/layout.component';
 
@@ -17,14 +18,16 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {environment } from './../environments/environment';
 import { LayoutUsersComponent } from './layout-users/layout-users.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
     LayoutComponent,
-    LayoutUsersComponent,
+    LayoutUsersComponent
   ],
   imports: [
     BrowserModule,
+    UserModule,
     AppRoutingModule,
     FormsModule,
     SharedModule,

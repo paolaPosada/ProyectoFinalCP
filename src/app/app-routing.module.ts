@@ -23,40 +23,21 @@ const routes: Routes = [
       },
       {
         path: 'contact',
-        canActivate: [AdminGuard],
         loadChildren: () =>
         import('./contact/contact.module').then(m => m.ContactModule)
       },
-    ]
-  },
-  {
-  path: '',
-  component: LayoutUsersComponent,
-  children: [
       {
-        path: '',
-        redirectTo: '/home',
-        pathMatch: 'full',
-      },
-      {
-        path: 'order',
-        canActivate: [AdminGuard],
+        path: 'products',
         loadChildren: () =>
-        import('./order/order.module').then(m => m.OrderModule)
-      },
-      {
-        path: 'home',
-        canActivate: [AdminGuard],
-        loadChildren: () =>
-        import('./home/home.module').then(m => m.HomeModule)
+        import('./product/product.module').then(m => m.ProductModule)
       }
     ]
   },
   {
-    path: 'admin',
+    path: 'user',
     canActivate: [AdminGuard],
     loadChildren: () =>
-    import('./admin/admin.module').then(m => m.AdminModule)
+    import('./user/user.module').then(m => m.UserModule)
   },
   {
     path: 'auth',
