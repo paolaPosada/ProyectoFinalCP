@@ -20,7 +20,7 @@ import { SharedModule } from './../shared/shared.module';
     MaterialModule,
     ReactiveFormsModule
   ],
-  exports:[
+  exports: [
     MaterialModule
   ]
 })
