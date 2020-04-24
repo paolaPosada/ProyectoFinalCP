@@ -13,11 +13,15 @@ import { SharedModule } from './../shared/shared.module';
 @NgModule({
   declarations: [LoginComponent, RegisterComponent],
   imports: [
+    MaterialModule,
     CommonModule,
     AuthRoutingModule,
     SharedModule,
     MaterialModule,
     ReactiveFormsModule
+  ],
+  exports:[
+    MaterialModule
   ]
 })
 export class AuthModule { }

@@ -1,11 +1,22 @@
-<form [formGroup]="form" (ngSubmit)="login($event)">
-    <mat-card>
-      <mat-card-header>
+<form [formGroup]="form" (ngSubmit)="login($event)" > 
+  
+  <mat-toolbar class="login">
+    <span>Criptopope, compra y venta de criptomonedas facil y seguro!</span>
+  </mat-toolbar>
+
+  <mat-card class="header">
+      <mat-card-header >
         <mat-card-title>Login</mat-card-title>
       </mat-card-header>
       <mat-card-content>
         <div class="row">
           <div class="col-xs">
+            <mat-form-field>
+              <input placeholder="Nombre" formControlName="name" matInput type="string">
+            </mat-form-field>
+            <mat-form-field>
+              <input placeholder="Nickname" formControlName="nickname" matInput type="string">
+            </mat-form-field>
             <mat-form-field>
               <input placeholder="email" formControlName="email" matInput type="email">
             </mat-form-field>
@@ -22,7 +33,26 @@
       <mat-card-actions>
         <button [disabled]="form.invalid" mat-raised-button type="submit">Ingresar</button>
       </mat-card-actions>
+     
+        <p>Si ya tienes una cuenta ingresa</p>
+        <a>sing in</a>
     </mat-card>
     
-  </form>
+    
+  </form> 
+ 
+
+<footer class="logfooter">
   
+  <div>
+    
+  
+<div class="redes">
+  <a href="#" ><img src="../../../../assets/images/facebook.png" alt="facebook" width="50px" height="50px"></a>
+  <a href="#" ><img src="../../../../assets/images/instagram.png" alt="instagram" width="30px" height="30px"></a>
+  <a href="#" ><img src="../../../../assets/images/twitter.png" alt="twitter" width="60px" height="35px"></a>
+</div>
+</div>
+    © 2020 Copyright:
+    <a href="https://mdbootstrap.com/"> MDBootstrap.com</a>
+</footer>
