@@ -12,12 +12,6 @@
         <div class="row">
           <div class="col-xs">
             <mat-form-field>
-              <input placeholder="Nombre" formControlName="name" matInput type="string">
-            </mat-form-field>
-            <mat-form-field>
-              <input placeholder="Nickname" formControlName="nickname" matInput type="string">
-            </mat-form-field>
-            <mat-form-field>
               <input placeholder="Email" formControlName="email" matInput type="email">
             </mat-form-field>
           </div>
@@ -36,8 +30,10 @@
         <!--<button mat-raised-button (click)="loginWithFacebook()">Ingresar con Facebook</button>-->
       </mat-card-actions>
      <p></p>
+     <mat-card-actions class="registro">
         <p>Si no tienes una cuenta registrate</p>
-        <a href="/auth/register">sing in</a>
+        <a href="/auth/register">Registrate</a>
+     </mat-card-actions>
     </mat-card>
   </form> 
  
