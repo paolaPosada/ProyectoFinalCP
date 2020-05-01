@@ -18,6 +18,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {environment } from './../environments/environment';
 import { LayoutUsersComponent } from './layout-users/layout-users.component';
 
+import { AngularFirestoreModule } from 'angularfire2/firestore';
+import { AngularFireDatabaseModule } from '@angular/fire/database';
 
 @NgModule({
   declarations: [
@@ -36,7 +38,9 @@ import { LayoutUsersComponent } from './layout-users/layout-users.component';
     HttpClientModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
-    AngularFireStorageModule
+    AngularFireStorageModule,
+    AngularFirestoreModule,
+    AngularFireDatabaseModule
   ],
   providers: [],
   bootstrap: [AppComponent]

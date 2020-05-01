@@ -8,6 +8,7 @@ import { RegisterComponent } from './components/register/register.component';
 
 import { MaterialModule } from './../material/material.module';
 import { SharedModule } from './../shared/shared.module';
+// import { DataBaseComponent } from '../data-base/data-base.component';
 
 
 @NgModule({

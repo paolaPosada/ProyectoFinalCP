@@ -18,7 +18,7 @@ export class LoginComponent implements OnInit {
     private router: Router,
     private authService: AuthService
   ) {
-    this.buildForm(),
+    this.buildForm();
     this.user = authService.authInfo;
   }
 
@@ -32,6 +32,7 @@ export class LoginComponent implements OnInit {
       this.authService.login(value.email, value.password)
       .then(() => {
         this.router.navigate(['/user/tienda']);
+        // const name = this.authService.name;
       })
       .catch(() => {
         alert('No es valido');
