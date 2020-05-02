@@ -47,7 +47,7 @@ export class AuthService {
     return this.af.authState;
   }
 
-  /*infoUser() {
+  infoUser() {
     firebase.auth().onAuthStateChanged(user => {
       if (user) {
          // tslint:disable-next-line: no-unused-expression
@@ -55,16 +55,6 @@ export class AuthService {
          console.log(user.email);
       }
     });
-  }*/
+  }
 
-  /*nameUser() {
-    const user = firebase.auth().currentUser;
-    // tslint:disable-next-line: one-variable-per-declaration
-    let name: string, email: string;
-    if (user != null) {
-      name = user.displayName;
-      email = user.email;
-    }
-    return name;
-  }*/
 }

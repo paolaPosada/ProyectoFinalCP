@@ -4,7 +4,7 @@
     <span>Criptopope, compra y venta de criptomonedas facil y seguro!</span>
   </mat-toolbar>
 
-  <mat-card class="header">
+  <mat-card class="header" ng-controller='login.component'>
       <mat-card-header >
         <mat-card-title>Login</mat-card-title>
       </mat-card-header>
@@ -12,14 +12,14 @@
         <div class="row">
           <div class="col-xs">
             <mat-form-field>
-              <input placeholder="Email" formControlName="email" matInput type="email">
+              <input id='userEmailInput' placeholder="Email" formControlName="email" matInput type="email">
             </mat-form-field>
           </div>
         </div>
         <div class="row">
           <div class="col-xs">
             <mat-form-field>
-              <input placeholder="Password" formControlName="password" matInput type="password">
+              <input id='userPasswordInput' placeholder="Password" formControlName="password" matInput type="password">
             </mat-form-field>
           </div>
         </div>
@@ -34,8 +34,8 @@
         <p>Si no tienes una cuenta registrate</p>
         <a href="/auth/register">Registrate</a>
      </mat-card-actions>
-    </mat-card>
-  </form> 
+  </mat-card>
+</form> 
  
 
 <footer class="logfooter">

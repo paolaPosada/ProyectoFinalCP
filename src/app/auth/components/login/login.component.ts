@@ -11,7 +11,6 @@ import { AuthService } from './../../../core/services/auth.service';
 export class LoginComponent implements OnInit {
 
   form: FormGroup;
-  user;
 
   constructor(
     private formBuilder: FormBuilder,
@@ -19,11 +18,12 @@ export class LoginComponent implements OnInit {
     private authService: AuthService
   ) {
     this.buildForm();
-    this.user = authService.authInfo;
+    // this.user = authService.authInfo;
   }
 
   ngOnInit() {
   }
+
 
   login(event: Event) {
     event.preventDefault();

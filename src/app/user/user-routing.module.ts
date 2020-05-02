@@ -29,6 +29,12 @@ const routes: Routes = [
         component: LayoutUsersComponent,
         loadChildren: () =>
         import('../contact/contact.module').then(m => m.ContactModule)
+      },
+      {
+        path: 'perfil',
+        canActivate: [AdminGuard],
+        loadChildren: () =>
+        import('../profile/profile.module').then(m => m.ProfileModule)
       }
     ]
   }
