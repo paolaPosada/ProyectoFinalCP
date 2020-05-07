@@ -10,31 +10,31 @@ import * as $ from 'jquery';
 })
 export class ProfileComponent implements OnInit {
 
+  userImgSrc;
   constructor(
     private af: AngularFireAuth
   ) { }
 
   ngOnInit(): void {
+    // tslint:disable-next-line: only-arrow-functions
     firebase.auth().onAuthStateChanged( function(user) {
       if (user) {
          // tslint:disable-next-line: no-unused-expression
          $('#userEmailInput').val(user.email);
          console.log('ESTES ES EL EMAIL PAOLA');
          console.log(user.email);
+         this.userImgSrc = user.photoURL;
       } else {
       }
     });
   }
 
-
-  infoUser() {
+  imagen() {
     // tslint:disable-next-line: only-arrow-functions
     firebase.auth().onAuthStateChanged( function(user) {
-      if (user) {
-         // tslint:disable-next-line: no-unused-expression
-         $('#userEmailInput').val(user.displayName);
-      } else {
-      }
+         // tslint:dile-next-line: no-unused-expression
+         console.log('ESTES ES la iamgen PAOLA');
+         this.userImgSrc = user.photoURL;
     });
   }
 }

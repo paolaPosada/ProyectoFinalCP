@@ -27,12 +27,10 @@ export class ProductComponent implements OnInit {
     }
 
   ngOnInit() {
-    console.log('3. ngOnInit');
   }
 
   addCart() {
-    console.log('añadir al carrito');
-    this.cartService.addCart(this.product);
+    this.cartService.changeCart(this.product);
   }
 
 }

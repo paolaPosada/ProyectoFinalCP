@@ -15,37 +15,43 @@ export class ProductsComponent implements OnInit {
       id: '1',
       image: 'assets/images/camiseta.png',
       title: 'Bitcoin',
-      price: 27251186.61
+      price: 27251186.61,
+      quantity: 1
     },
     {
       id: '2',
       image: 'assets/images/hoodie.png',
       title: 'Ethereum',
-      price: 682652.4
+      price: 682652.4,
+      quantity: 1
     },
     {
       id: '3',
       image: 'assets/images/mug.png',
       title: 'ZCash',
-      price: 179541.63
+      price: 179541.63,
+      quantity: 1
     },
     {
       id: '4',
       image: 'assets/images/pin.png',
       title: 'Monero',
-      price: 237739.83
+      price: 237739.83,
+      quantity: 1
     },
     {
       id: '5',
       image: 'assets/images/stickers1.png',
       title: 'Litecoin',
-      price: 161956.06
+      price: 161956.06,
+      quantity: 1
     },
     {
       id: '6',
       image: 'assets/images/stickers2.png',
       title: 'Dash',
-      price: 328188.95
+      price: 328188.95,
+      quantity: 1
     }
   ];
   // namep;

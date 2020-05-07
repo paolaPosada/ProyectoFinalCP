@@ -1,34 +1,39 @@
 <mat-horizontal-stepper>
-    <mat-step>
-      <ng-template matStepLabel>Sus productos</ng-template>
-      <div *ngIf="(products$ | async) as products">
-          <p *ngIf="products.length === 0">no hay productos</p>
-          <div class="row" *ngFor="let product of products">
-            <div class="col-xs-12 col-sm-2 col-md-2">
-              <div class="box">
-                <img class="image" [src]="product.image" alt="">
-              </div>
-            </div>
-            <div class="col-xs-12 col-sm-5 col-md-5">
-              <div class="box">
-                {{ product.title }}
-              </div>
-            </div>
-            <div class="col-xs-12 col-sm-5 col-md-5">
-              <div class="box">
-                {{ product.price }}
-              </div>
-            </div>
+  <mat-step>
+    <ng-template matStepLabel>Comprar criptomonedas</ng-template>
+    <div class="contenedor2" style="width: 30%; float:right">
+        <div class="shopping-cart-header">
+          <i class="fa fa-shopping-cart cart-icon"></i>
+          <span class="badge">{{totalQuantity}}</span>
+          <div class="shopping-cart-total">
+            <span class="lighter-text">Total: </span>
+            <span class="lighter-text"> {{totalPrice.toPrecision(9)|currency}}</span>
           </div>
+        </div>
+    </div>
+      <div class="contenedor1" style="width: 68%; float:left"> 
+        <ul class="shopping-cart-items">
+          <div class="clearfix" *ngFor="let item of products">
+            <img [src]="item.image" alt="item1" class="image" />
+            <div class="item-name">{{item.title}}</div>
+            <div class="item-price">{{item.price.toPrecision(9)|currency}}</div>
+            <div class="item-quantity">Cant: {{item.quantity}}</div>
+            <div class="item-total">Total: {{(item.quantity*item.price).toPrecision(9)|currency}} </div>
+            <button mat-mini-fab color="accent"  (click)="addProduct(item)" class="actions">
+              <mat-icon>add_shopping_cart</mat-icon>
+            </button>
+            <button mat-mini-fab color="accent"  (click)="deleteProduct(item)" class="actions">
+              <mat-icon>remove_shopping_cart</mat-icon>
+            </button>
+            <p></p>  
+          </div>
+        </ul>
+    </div>
+  </mat-step>
+    <mat-step>
+      <ng-template matStepLabel>Pagar</ng-template>
+      <div>
+        <h1>pago</h1>
       </div>
-      
-    </mat-step>
-    <mat-step>
-      <ng-template matStepLabel>Datos personales</ng-template>
-      <h1>contenido...</h1>
-    </mat-step>
-    <mat-step>
-      <ng-template matStepLabel>Pago</ng-template>
-      <h1>contenido...</h1>
-    </mat-step>
-  </mat-horizontal-stepper>
+  </mat-step>
+</mat-horizontal-stepper>
