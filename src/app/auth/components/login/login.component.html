@@ -1,51 +1,33 @@
-<form [formGroup]="form" (ngSubmit)="login($event)" > 
-  
-  <!--<mat-toolbar class="login">
-    <span>Criptopope, compra y venta de criptomonedas facil y seguro!</span>
-  </mat-toolbar>-->
-
+<form [formGroup]="form" (ngSubmit)="login($event)" class="imagen"> 
   <mat-card class="header" ng-controller='login.component'>
-      <mat-card-header >
-        <mat-card-title>Login</mat-card-title>
+      <mat-card-header class="title" >
+        <mat-card-title class="logintitle">Login</mat-card-title>
       </mat-card-header>
       <mat-card-content>
         <div class="row">
           <div class="col-xs">
             <mat-form-field>
-              <input id='userEmailInput' placeholder="Email" formControlName="email" matInput type="email">
+              <input class="campos" id='userEmailInput' placeholder="Email" formControlName="email" matInput type="email">
             </mat-form-field>
           </div>
         </div>
         <div class="row">
           <div class="col-xs">
             <mat-form-field>
-              <input id='userPasswordInput' placeholder="Password" formControlName="password" matInput type="password">
+              <input class="campos" id='userPasswordInput' placeholder="Password" formControlName="password" matInput type="password">
             </mat-form-field>
           </div>
         </div>
       </mat-card-content>
       <mat-card-actions class="boton">
-        <button [disabled]="form.invalid" mat-raised-button type="submit">Ingresar</button>
-        <button mat-raised-button (click)="loginWithGoogle()">Google</button>
-        <!--<button mat-raised-button (click)="loginWithFacebook()">Ingresar con Facebook</button>-->
+        <button [disabled]="form.invalid" mat-raised-button type="submit" class="letraB">Ingresar</button>
+        <button mat-raised-button (click)="loginWithGoogle()" class="letraB">Google</button>
       </mat-card-actions>
+     
      <p></p>
      <mat-card-actions class="registro">
-        <p>Si no tienes una cuenta registrate</p>
-        <a href="/auth/register">Registrate</a>
+        <a>Si no tienes una cuenta </a>
+        <a href="/auth/register">registrate</a>
      </mat-card-actions>
   </mat-card>
 </form> 
- 
-
-<!--<footer class="logfooter">
-<div>
-  <div class="redes">
-    <a href="#" ><img src="../../../../assets/images/facebook.png" alt="facebook" width="50px" height="50px"></a>
-    <a href="#" ><img src="../../../../assets/images/instagram.png" alt="instagram" width="30px" height="30px"></a>
-    <a href="#" ><img src="../../../../assets/images/twitter.png" alt="twitter" width="60px" height="35px"></a>
-  </div>
-</div>
-    © 2020 Copyright:
-    <a href="https://mdbootstrap.com/"> MDBootstrap.com</a>
-</footer>-->

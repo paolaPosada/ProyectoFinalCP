@@ -13,6 +13,7 @@ import { MatRadioModule } from '@angular/material/radio';
 import { MatTableModule } from '@angular/material/table';
 
 import { LayoutModule } from '@angular/cdk/layout';
+import {MatCheckboxModule} from '@angular/material/checkbox';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { MatGridListModule } from '@angular/material/grid-list';
@@ -47,7 +48,8 @@ import {MatTooltipModule} from '@angular/material/tooltip';
     LayoutModule,
     MatPaginatorModule,
     MatFormFieldModule,
-    MatStepperModule
+    MatStepperModule,
+    MatCheckboxModule
   ],
   exports: [
     MatButtonModule,
@@ -67,7 +69,8 @@ import {MatTooltipModule} from '@angular/material/tooltip';
     LayoutModule,
     MatPaginatorModule,
     MatFormFieldModule,
-    MatStepperModule
+    MatStepperModule,
+    MatCheckboxModule
   ]
 })
 export class MaterialModule { }

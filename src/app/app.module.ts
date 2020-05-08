@@ -22,6 +22,7 @@ import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
 import {ProfileModule} from './profile/profile.module';
 
+
 @NgModule({
   declarations: [
     AppComponent,

@@ -1,50 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
 .header{
     page-break-after: auto;
     border: 3px #2AA5A1 solid;
     margin: auto;
     width: 230px;
-    height: 400px;}
-
-.login{
-    background-color: #2AA5A1;
-  margin-bottom: 50px;;
-  padding: 20px;
- color: white;
-  /* IMPORTANTE */
-  text-align: center;
+    height: 400px;
+    padding: 10px;
+    margin-top: 20px;
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    display: block;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.mat-card-header {
+    display: block;
 }
 
-.logfooter{
-    background-color: #2AA5A1;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    color: white;
+.campos{
+    font-family: 'Oswald', sans-serif;
 }
-.secciones{
-    margin: auto;
-    float: left;    
-}
-.redes{
-    margin: auto;
-    float: right;
-}
-.iconred{
-    width: 30px;
-    height: 30px;
-}
-
 .a{
     color: white;
 }
 .boton
 {
     display: inline;
-}
-.registro {
-    width: 280px;
-    height: 45px;
-    padding-left: 5px;
-    padding-top: 150px;
+    font-family: 'Oswald', sans-serif;
+    padding: 10px;
+    margin: 0 8px;
 }
 
+.title{
+    font-family: 'Oswald', sans-serif;
+    text-align: center;
+    padding: 10px;
+}
+.logintitle{
+    text-align: center;
+    padding: 20px;
+    font-size: 30px;
+}
+.mat-form-field-infix{
+    font-family: 'Oswald', sans-serif;
+}
+.mat-form-field {
+    font-family: 'Oswald', sans-serif;
+}
+.letraB{
+    background-color: #245E71;
+    font-family: 'Oswald', sans-serif;
+}
