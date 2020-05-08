@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
 .crop-image {
   height: 300px;
   width: 100%;
@@ -12,5 +14,24 @@ img {
   max-width: 100%;
 }
 .mat-card-actions {
-  justify-content: flex-start;
+    justify-content: flex-end;
+    margin-left: 260px;
+    margin-top: -10px;
+}
+.add {
+  justify-content: flex-end;
+  background-color: #245E71;
+  color: black;
+}
+.mat-card{
+  font-family: 'Oswald', sans-serif;
+  justify-content: flex-end;
+}
+.mat-card-title{
+  font-family: 'Oswald', sans-serif, bold;
+font-size: 30px;
+}
+.mat-card-subtitle{
+
+font-size: 20px;
 }

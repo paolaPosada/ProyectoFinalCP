@@ -1,19 +1,28 @@
-<mat-toolbar color="primary">
+<mat-toolbar class="header">
   <mat-toolbar-row>
     <div class="row between-xs middle-xs header-row">
-    <nav>
-      <a mat-button routerLink="/home" routerLinkActive="active">Home</a>
-      <a mat-button routerLink="/products" routerLinkActive="active">Products</a>
-      <a mat-button routerLink="/contact" routerLinkActive="active">Contact</a>
-    </nav>
-   <!-- <a routerLink="/order" mat-raised-button [matBadge]="total$ | async" matBadgeColor="warn">
-    <mat-icon>shopping_cart</mat-icon>
-    Carrito
-    </a> -->
-    <a routerLink="/auth/login" mat-raised-button>
-      <mat-icon>person</mat-icon>
-      Iniciar Sesión
+      <nav class="actions">
+      <a class="buttonsLeft" mat-raised-button routerLink="/home" routerLinkActive="active">
+        <mat-icon>home</mat-icon>
+        Home
       </a>
+      <a class="buttonsLeft" mat-raised-button routerLink="/products" routerLinkActive="active">
+        <mat-icon>store</mat-icon>
+        Tienda
+      </a>
+      <a class="buttonsLeft" mat-raised-button routerLink="/contact" routerLinkActive="active">
+        <mat-icon>contact_support</mat-icon>
+        Contactenos
+      </a>
+      <a class="buttonsRight" routerLink="/auth/login" mat-raised-button routerLinkActive="active">
+        <mat-icon>person</mat-icon>
+        Iniciar Sesión
+      </a>
+      <a class="buttonsRight" routerLink="/auth/register" mat-raised-button routerLinkActive="active">
+        <mat-icon>person_add</mat-icon>
+        Registrarse
+      </a>
+    </nav>
     </div>
 
   </mat-toolbar-row>

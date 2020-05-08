@@ -5,6 +5,8 @@ import { OrderRoutingModule } from './order-routing.module';
 import { OrderComponent } from './components/order/order.component';
 import { MaterialModule } from './../material/material.module';
 import { SharedModule } from './../shared/shared.module';
+import { NgxPayPalModule } from 'ngx-paypal';
+
 
 @NgModule({
   declarations: [OrderComponent],
@@ -12,7 +14,8 @@ import { SharedModule } from './../shared/shared.module';
     CommonModule,
     OrderRoutingModule,
     SharedModule,
-    MaterialModule
+    MaterialModule,
+    NgxPayPalModule
   ]
 })
 export class OrderModule { }

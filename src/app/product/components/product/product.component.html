@@ -1,4 +1,4 @@
-<mat-card>
+<mat-card >
     <mat-card-header>
         <mat-card-title>{{ product.title | uppercase }}</mat-card-title>
         <mat-card-subtitle>{{ product.price | currency }}</mat-card-subtitle> 
@@ -6,7 +6,10 @@
     <div class="crop-image">
         <img [src]="product.image" alt="">
     </div>
-    <mat-card-actions  >
-        <button (click)="addCart()" mat-raised-button color="primary" >Agregar al carrito</button>
+    <mat-card-actions >
+        <button mat-fab class="add" (click)="addCart()">
+            <mat-icon>add_shopping_cart</mat-icon>
+        </button>
+         <!--<button (click)="addCart()" mat-raised-button class="add" >Agregar al carrito</button>-->
     </mat-card-actions>
 </mat-card>

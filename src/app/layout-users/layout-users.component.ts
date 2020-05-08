@@ -9,7 +9,7 @@ export class LayoutUsersComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit() {
   }
 
 }

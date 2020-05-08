@@ -1,6 +1,7 @@
 
 @import url(https://fonts.googleapis.com/css?family=Lato:300,400,700);
 @import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css);
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
 
 *, *:before, *:after {
   box-sizing: border-box;
@@ -10,6 +11,7 @@
   width: auto;
   z-index: 1;
   left: 63%;
+  font-family: 'Oswald', sans-serif;
 }
 .badge {
   background-color: #2AA5A1;
@@ -22,8 +24,8 @@
   text-align: center;
   vertical-align: middle;
   white-space: nowrap;
+  font-family: 'Oswald', sans-serif;
 }
-
 .shopping-cart-header {
   width: 320px;
   position: relative;
@@ -31,14 +33,16 @@
   padding: 20px;
   border-bottom: 1px solid #E8E8E8;
   padding-bottom: 15px;
+  font-family: 'Oswald', sans-serif;
 }
 .shopping-cart-total {
   float: right;
+  font-family: 'Oswald', sans-serif;
 }
 .shopping-cart-items {
     padding-top: 20px;
+    font-family: 'Oswald', sans-serif;
 }
-
 .image {
   float: left;
   margin-right: 100px;
@@ -51,28 +55,26 @@
   display: block;
   padding-top: 10px;
   font-size: 20px;
+  font-family: 'Oswald', sans-serif;
 }
 .item-price {
   font-size: 16px;
   color: brown;
-  
+  font-family: 'Oswald', sans-serif;
 }
 .item-quantity {
   font-size: 16px;
+  font-family: 'Oswald', sans-serif;
 }
 .item-total{
   font-size: 16px;
   color: brown;
+  font-family: 'Oswald', sans-serif;
 }
 .actions{
-  background-color: #2AA5A1;
-  /*margin-left: 20px;
-  margin-top: 10PX;
-  margin-right: 20PX;*/
+  background-color: #245E71;
   margin: 15PX;
-
 }
-
 .cart-icon {
   color: #515783;
   font-size: 24px;
@@ -110,4 +112,11 @@
 .lighter-text{
  font-size: 20px;
  color: brown;
+ font-family: 'Oswald', sans-serif;
 }
+.mat-stepper-horizontal {
+  font-family: 'Oswald', sans-serif;
+ 
+}
+
+

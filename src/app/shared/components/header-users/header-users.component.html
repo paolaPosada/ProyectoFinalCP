@@ -1,16 +1,25 @@
-<mat-toolbar color="primary">
+<mat-toolbar class="header">
     <mat-toolbar-row>
       <div class="row between-xs middle-xs header-row">
-      <!--<nav>
-        <a mat-button routerLink="/home" routerLinkActive="active">Home</a>
-        <a mat-button routerLink="/products" routerLinkActive="active">Products</a>
-        <a mat-button routerLink="/contact" routerLinkActive="active">Contact</a>
-      </nav>-->
-        <a routerLink="/user/carrito" mat-raised-button [matBadge]="total$ | async" matBadgeColor="warn">
-          <mat-icon>shopping_cart</mat-icon>
-          Carrito
-        </a>   
+        <nav class="actions">
+          <!--<a mat-button routerLink="/home" routerLinkActive="active"></a>-->
+          <a class="buttonsLeft" mat-raised-button routerLink="/user/tienda" routerLinkActive="active">
+            <mat-icon>store</mat-icon>
+            Tienda
+          </a>
+          <a class="buttonsLeft" mat-raised-button routerLink="/user/contacto" routerLinkActive="active">
+            <mat-icon>contact_support</mat-icon>
+            Contactenos
+          </a>
+          <a class="buttonsRight" mat-raised-button (click)="logout()">
+            <mat-icon>power_settings_new</mat-icon>
+            Cerrar Sesión
+          </a>
+          <a class="buttonsRight" routerLink="/user/carrito" routerLinkActive="active" mat-raised-button [matBadge]="total$ | async" matBadgeColor="warn">
+            <mat-icon>shopping_cart</mat-icon>
+            Carrito
+          </a>   
+        </nav>
       </div>
-  
     </mat-toolbar-row>
-  </mat-toolbar>
+</mat-toolbar>

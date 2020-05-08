@@ -1,39 +1,35 @@
 <mat-horizontal-stepper>
   <mat-step>
-    <ng-template matStepLabel>Comprar criptomonedas</ng-template>
+   
+    <ng-template matStepLabel >Comprar criptomonedas</ng-template>
     <div class="contenedor2" style="width: 30%; float:right">
         <div class="shopping-cart-header">
           <i class="fa fa-shopping-cart cart-icon"></i>
           <span class="badge">{{totalQuantity}}</span>
           <div class="shopping-cart-total">
             <span class="lighter-text">Total: </span>
-            <span class="lighter-text"> {{totalPrice.toPrecision(9)|currency}}</span>
+            <span class="lighter-text">$ {{totalPrice  | number:'1.0-0' }}</span>
           </div>
         </div>
+        <ngx-paypal [config]="payPalConfig">Paypal</ngx-paypal>
     </div>
       <div class="contenedor1" style="width: 68%; float:left"> 
         <ul class="shopping-cart-items">
           <div class="clearfix" *ngFor="let item of products">
             <img [src]="item.image" alt="item1" class="image" />
             <div class="item-name">{{item.title}}</div>
-            <div class="item-price">{{item.price.toPrecision(9)|currency}}</div>
+            <div class="item-price">$ {{item.price|number:'1.0-0'}}</div>
             <div class="item-quantity">Cant: {{item.quantity}}</div>
-            <div class="item-total">Total: {{(item.quantity*item.price).toPrecision(9)|currency}} </div>
-            <button mat-mini-fab color="accent"  (click)="addProduct(item)" class="actions">
+            <div class="item-total">Total: ${{(item.quantity*item.price)|number:'1.0-0'}} </div>
+            <button mat-mini-fab (click)="addProduct(item)" class="actions">
               <mat-icon>add_shopping_cart</mat-icon>
             </button>
-            <button mat-mini-fab color="accent"  (click)="deleteProduct(item)" class="actions">
+            <button mat-mini-fab (click)="deleteProduct(item)" class="actions">
               <mat-icon>remove_shopping_cart</mat-icon>
             </button>
             <p></p>  
           </div>
         </ul>
     </div>
-  </mat-step>
-    <mat-step>
-      <ng-template matStepLabel>Pagar</ng-template>
-      <div>
-        <h1>pago</h1>
-      </div>
   </mat-step>
 </mat-horizontal-stepper>
