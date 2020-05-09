@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+
 import {LayoutUsersComponent} from '../layout-users/layout-users.component';
-import {FooterComponent} from '../shared/components/footer/footer.component';
 import {AdminGuard} from '../admin.guard';
 
 const routes: Routes = [
@@ -25,18 +25,6 @@ const routes: Routes = [
         canActivate: [AdminGuard],
         loadChildren: () =>
         import('../order/order.module').then(m => m.OrderModule)
-      },
-      {
-        path: 'contacto',
-        canActivate: [AdminGuard],
-        loadChildren: () =>
-        import('../contact/contact.module').then(m => m.ContactModule)
-      },
-      {
-        path: 'perfil',
-        canActivate: [AdminGuard],
-        loadChildren: () =>
-        import('../profile/profile.module').then(m => m.ProfileModule)
       }
     ]
   }

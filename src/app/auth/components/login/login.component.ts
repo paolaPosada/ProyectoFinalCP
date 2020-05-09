@@ -18,7 +18,6 @@ export class LoginComponent implements OnInit {
     private authService: AuthService
   ) {
     this.buildForm();
-    // this.user = authService.authInfo;
   }
 
   ngOnInit() {
@@ -32,7 +31,6 @@ export class LoginComponent implements OnInit {
       this.authService.login(value.email, value.password)
       .then(() => {
         this.router.navigate(['/user/tienda']);
-        // const name = this.authService.name;
       })
       .catch(() => {
         alert('No es valido');
@@ -58,17 +56,4 @@ export class LoginComponent implements OnInit {
       alert('No es valido');
     });
   }
-
-  loginWithFacebook() {
-    this.authService.loginWithFacebook()
-    .then((data) => {
-      alert('Logeado con Facebook correctamente');
-      this.router.navigate(['/user/tienda']);
-      console.log(data);
-    })
-    .catch(() => {
-      alert('No es valido');
-    });
-  }
-
 }

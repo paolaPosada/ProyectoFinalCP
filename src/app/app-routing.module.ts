@@ -22,11 +22,6 @@ const routes: Routes = [
         import('./home/home.module').then(m => m.HomeModule)
       },
       {
-        path: 'contact',
-        loadChildren: () =>
-        import('./contact/contact.module').then(m => m.ContactModule)
-      },
-      {
         path: 'products',
         loadChildren: () =>
         import('./product/product.module').then(m => m.ProductModule)

@@ -1,6 +1,5 @@
 export const environment = {
   production: true,
-  url_api: 'https://platzi-store-stag.herokuapp.com',
   firebase: {
     apiKey: 'AIzaSyCo-BR8EOiZ_ScMIzx2Zozy6fVJ17bj5EY',
     authDomain: 'criptopope.firebaseapp.com',

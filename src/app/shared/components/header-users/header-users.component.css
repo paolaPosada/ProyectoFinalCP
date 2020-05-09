@@ -19,6 +19,7 @@
 }
 a.active {
   background-color: #245E71;
+  color: white;
 }
 .actions{
   width: 100%;
